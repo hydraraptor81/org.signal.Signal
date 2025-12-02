@@ -86,6 +86,6 @@ export TMPDIR="${XDG_RUNTIME_DIR}/app/${FLATPAK_ID}"
 
 # Chromium leaks tmpfiles, cleanup any old ones
 find "${TMPDIR}" -name ".org.chromium.Chromium.*" -delete
-
+sed -i '/"key":/d' ~/.var/app/org.signal.Signal/config/Signal/config.json
 # Finally launch signal
 exec zypak-wrapper "/app/Signal/signal-desktop" "${EXTRA_ARGS[@]}" "$@"
