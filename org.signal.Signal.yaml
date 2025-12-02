@@ -17,6 +17,7 @@ finish-args:
   - --socket=pulseaudio
   # All devices (camera, microphone for calls)
 #  - --device=all
+  - --device=dri
   # Network Access
   - --share=network
   # We need to be able to inhibit sleep
